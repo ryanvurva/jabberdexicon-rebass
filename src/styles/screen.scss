@@ -1,8 +1,5 @@
 @import 'utility';
 
-$base-text-size: 16px;
-$base-font-family: sans-serif;
-
 html {
   @include full-height;
 }
@@ -10,4 +7,132 @@ html {
 body {
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+}
+
+.App {
+  height: 100%;
+}
+
+.letterBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+
+  li a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+  }
+}
+
+main {
+  min-height: 400px;
+}
+
+.one-list {
+  li {
+    list-style: none;
+    padding-left: 0;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 150px auto;
+
+  img {
+    position: absolute;
+    z-index: -2;
+  }
+
+  .container {
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .copy {
+    position: relative;
+    margin: 10px 0;
+    opacity: 0;
+    overflow: hidden;
+    @extend .Copy;
+  }
+
+  .banana {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .Banana;
+    opacity: 0;
+
+    .ban {
+
+    }
+
+    .ana {
+      @extend .disappear;
+    }
+  }
+
+  .mainA {
+    color: rgb(195, 20, 46);
+    opacity: 0;
+    position: relative;
+    top: 0;
+    @extend .A;
+  }
+
+  .apple {
+    opacity: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .Apple;
+
+    .a {
+      @extend .disappear;
+    }
+
+    .pple {
+
+    }
+  }
+
+  .designs {
+    margin: 0 0 3px 0;
+    opacity: 0;
+    @extend .Designs;
+    font-variant: small-caps;
+  }
+
+  .shadow {
+    width: 40px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(111, 112, 112);
+    display:block;
+    margin: 0 auto;
+    z-index: -1;
+    position: relative;
+    top: -14px;
+    left: 1.8px;
+    opacity: 0;
+    @extend .Shadow;
+  }
 }
